@@ -9,11 +9,6 @@
   padding: 10vh 0;
 }
 
-.logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .logo img {
   width: 160px;
 }
@@ -24,37 +19,11 @@
   padding: 20px;
 }
 
-.login-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 28px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.login-title {
-  color: white;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
 .info-box {
   background-color: #d2ecf1;
   border-radius: 8px;
-  padding: 15px;
   font-size: 0.875rem;
-  margin-bottom: 20px;
   color: #366a92;
-}
-
-.info-box a {
-  color: #0275d8;
-  text-decoration: none;
-}
-
-.info-box a:hover {
-  text-decoration: underline;
 }
 
 .form-control {

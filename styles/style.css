@@ -1,5 +1,8 @@
 :root {
-  --secondary-pink: #ff4081;
+  --bs-primary: #1f6be5;
+  --bs-primary-rgb: 217, 79, 51;
+  --secondary-pink: #f35488;
+  --text-link: #0275d8;
 }
 
 body {
@@ -9,7 +12,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
 
 .background-layer {
@@ -52,4 +55,9 @@ body {
   width: 18px;
   height: 18px;
   margin-right: 8px;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
 }
