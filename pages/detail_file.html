@@ -49,11 +49,11 @@
       <div class="container">
         <!-- Header -->
         <div class="header d-flex justify-content-center align-items-center px-3">
-          <button class="back-button">
+          <a href="./list_file.html" class="back-button">
             <i class="fa fa-arrow-left"></i>
-          </button>
+          </a>
           <h1 class="header-title">Hồ sơ bảo hiểm</h1>
-          <span class="timestamp">
+          <span class="timestamp d-none d-md-inline-block">
             <i class="far fa-clock"></i>
             <span>15:45 - 25/02/2025</span>
           </span>
@@ -101,7 +101,7 @@
               aria-labelledby="result-tab"
               tabindex="0"
             >
-              <div class="document-grid">
+              <div class="document-grid py-5 px-0 px-md-3">
                 <div class="document-card">
                   <img
                     src="https://d3design.vn/uploads/Anh_bia_summer_sale_holiday_podium_display_on_yellow_background.jpg"
@@ -125,7 +125,7 @@
 
             <!-- File Tab -->
             <div class="tab-pane fade" id="file-tab-pane" role="tabpanel" aria-labelledby="file-tab" tabindex="0">
-              <div class="document-grid">
+              <div class="document-grid py-5 px-0 px-md-3">
                 <div class="document-card">
                   <img
                     src="https://insieutoc.vn/wp-content/uploads/2021/03/cach-thiet-ke-poster.jpg"
@@ -139,24 +139,24 @@
       </div>
 
       <!-- Footer -->
-      <div class="fixed-bottom bg-white py-2">
+      <div class="fixed-bottom bg-white py-2 shadow-up">
         <div class="container">
           <div class="d-flex gap-2 justify-content-between">
             <button class="btn btn-outline-danger btn-sm rounded-3">
-              <i class="fas fa-trash me-2"></i>
+              <i class="fas fa-trash me-1 d-none d-md-inline-block"></i>
               <span>Xóa tệp</span>
             </button>
             <div class="d-flex gap-2">
               <button class="btn btn-primary btn-sm rounded-3">
-                <i class="fas fa-file-word me-2"></i>
+                <i class="fas fa-file-word me-1 d-none d-md-inline-block"></i>
                 <span>Tải xuống Word</span>
               </button>
               <button class="btn btn-success btn-sm rounded-3">
-                <i class="fas fa-file-excel me-2"></i>
+                <i class="fas fa-file-excel me-1 d-none d-md-inline-block"></i>
                 Tải xuống Excel
               </button>
               <button class="btn btn-warning btn-sm rounded-3">
-                <i class="fas fa-file-pdf me-2"></i>
+                <i class="fas fa-file-pdf me-1 d-none d-md-inline-block"></i>
                 Tải xuống PDF
               </button>
             </div>

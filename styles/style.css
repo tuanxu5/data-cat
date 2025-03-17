@@ -1,5 +1,6 @@
 :root {
   --bs-primary: #1f6be5;
+  --bs-nav-link-hover-color: #ffffff;
   --bs-primary-rgb: 217, 79, 51;
   --secondary-pink: #f35488;
   --text-link: #0275d8;
@@ -13,6 +14,10 @@ body {
   overflow: hidden;
   position: relative;
   font-size: 14px !important;
+}
+
+.shadow-up {
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 .background-layer {
