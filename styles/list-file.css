@@ -277,13 +277,11 @@
 }
 
 .footer-logo {
-  width: 150px;
+  height: 3rem;
 }
 
-.footer-tagline {
-  font-size: 12px;
-  color: #666;
-  margin-top: 5px;
+.marketai-logo {
+  height: 3rem;
 }
 
 .footer-right {
@@ -299,11 +297,6 @@
   margin-right: 5px;
 }
 
-.marketai-logo {
-  width: 100px;
-  margin-left: 5px;
-}
-
 .groups-store {
   display: flex;
   flex-direction: column;
@@ -311,7 +304,7 @@
 }
 
 .qr-code {
-  height: 80px;
+  height: 5rem;
 }
 
 .app-store-links {
