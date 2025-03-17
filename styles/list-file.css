@@ -194,13 +194,25 @@
 .groups-document-info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   color: #3b3b3b;
+  font-size: 11px;
 }
 
 .groups-document-info img {
-  height: 18px;
+  height: 14px;
   mix-blend-mode: multiply;
+}
+
+.document-type {
+  color: var(--bs-primary);
+  font-weight: 600;
+}
+
+.document-type img {
+  background-color: var(--bs-primary);
+  padding: 1px;
+  border-radius: 4px;
 }
 
 .document-title {
@@ -218,7 +230,16 @@
 }
 
 .document-count {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+}
+
+.document-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #333;
 }
 

@@ -71,10 +71,16 @@ a {
 
 .dropdown-item {
   font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-item:hover {
+  background-color: #e1edff;
 }
 
 .form-select {
   min-width: 180px;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 14px;
 }
