@@ -66,3 +66,7 @@ a {
   color: var(--text-link);
   text-decoration: none;
 }
+
+.dropdown-item {
+  font-size: 12px;
+}
