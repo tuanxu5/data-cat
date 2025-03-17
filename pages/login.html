@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datacat - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <!-- Background layers -->
+    <div class="background-layer circuit-layer"></div>
+    <div class="background-layer gradient-layer"></div>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <a href="#" class="active"><img src="../assets/images/languages/english.png" alt="English" /> EN</a>
+      <a href="#"><img src="../assets/images/languages/vietnamese.png" alt="Vietnam" /> VI</a>
+    </div>
+
+    <!-- Content layer -->
+    <div class="content-layer-login">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="" />
+      </div>
+
+      <div class="login-container">
+        <!-- Login Title -->
+        <h2 class="login-title">Đăng nhập</h2>
+
+        <!-- Login Card -->
+        <div class="login-card">
+          <!-- Info Box -->
+          <div class="info-box">
+            <p class="mb-0">
+              To try the demo, please log in with the following credentials. If you don't have an account, you can
+              <a href="#" class="underline">register as a new user</a>.
+            </p>
+          </div>
+
+          <!-- Login Form -->
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter password" />
+            </div>
+            <a href="./list-file.html">
+              <button type="submit" class="btn btn-login">Login</button>
+            </a>
+
+            <div class="forgot-link">
+              <a href="#">Forgot your password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script></script>
+  </body>
+</html>
