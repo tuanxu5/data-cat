@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
   --bs-primary: #1f6be5;
   --bs-nav-link-hover-color: #ffffff;
@@ -69,4 +71,10 @@ a {
 
 .dropdown-item {
   font-size: 12px;
+}
+
+.form-select {
+  min-width: 180px;
+  border-radius: 12px;
+  font-size: 14px;
 }

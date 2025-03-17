@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Page | Data Cat</title>
+    <title>Chi tiết file | Data Cat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="../styles/style.css" />
@@ -15,7 +15,7 @@
     <div class="background-layer gradient-layer"></div>
     <!-- Top Bar -->
     <div class="content-layer-detail-file">
-      <div class="container">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <div class="top-bar">
@@ -61,9 +61,10 @@
                     <span>VN</span>
                   </button>
                 </div>
+                <span class="me-4 text-white">|</span>
                 <div class="d-none d-md-inline-block">
                   <span class="text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Tranbatoan95@gmail.com</span>
+                    <span>tranbatoan95@gmail.com</span>
                     <i class="fas fa-chevron-down ms-2"></i>
                   </span>
                   <ul class="dropdown-menu">
@@ -85,7 +86,77 @@
           </div>
         </div>
       </div>
-      <div class="container">
+
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-12">
+            <div class="main-nav" id="myTab" role="tablist">
+              <div
+                class="nav-item nav-link"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                <div class="nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-all-file.png" alt="" />
+                </div>
+                Tất cả tệp
+              </div>
+              <div
+                class="nav-item nav-link"
+                id="id-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#id-tab-content"
+                type="button"
+                role="tab"
+                aria-controls="id-tab-content"
+                aria-selected="false"
+              >
+                <div class="nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-id.png" alt="" />
+                </div>
+                ID
+              </div>
+              <div
+                class="nav-item nav-link"
+                id="document-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#document-tab-content"
+                type="button"
+                role="tab"
+                aria-controls="document-tab-content"
+                aria-selected="false"
+              >
+                <div class="nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-document.png" alt="" />
+                </div>
+                Document
+              </div>
+              <div
+                class="nav-item nav-link"
+                id="book-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#book-tab-content"
+                type="button"
+                role="tab"
+                aria-controls="book-tab-content"
+                aria-selected="false"
+              >
+                <div class="nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-book.png" alt="" />
+                </div>
+                Book
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-xxl">
         <!-- Header -->
         <div class="header d-flex justify-content-center align-items-center px-3">
           <a href="./list_file.html" class="back-button">
@@ -99,7 +170,7 @@
         </div>
 
         <!-- Tab Navigation -->
-        <div class="container tab-container">
+        <div class="container-xxl tab-container">
           <ul class="nav tab-nav" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button
@@ -140,6 +211,17 @@
               aria-labelledby="result-tab"
               tabindex="0"
             >
+              <div class="py-4 px-0 px-md-3">
+                <iframe
+                  class="custom-iframe rounded-4 w-100"
+                  src="https://www.figma.com/design/oQlagOe4mh4q6mALFje1z2/DataCAT?node-id=0-58&t=vJhndnC4x1FKNBY5-0"
+                  frameborder="0"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- File Tab -->
+            <div class="tab-pane fade" id="file-tab-pane" role="tabpanel" aria-labelledby="file-tab" tabindex="0">
               <div class="document-grid py-5 px-0 px-md-3">
                 <div class="document-card">
                   <img
@@ -158,18 +240,6 @@
                 </div>
                 <div class="document-card">
                   <img src="https://d3design.vn/uploads/7138970.jpg" alt="Căn cước công dân 2" />
-                </div>
-              </div>
-            </div>
-
-            <!-- File Tab -->
-            <div class="tab-pane fade" id="file-tab-pane" role="tabpanel" aria-labelledby="file-tab" tabindex="0">
-              <div class="document-grid py-5 px-0 px-md-3">
-                <div class="document-card">
-                  <img
-                    src="https://insieutoc.vn/wp-content/uploads/2021/03/cach-thiet-ke-poster.jpg"
-                    alt="File gốc 1"
-                  />
                 </div>
               </div>
             </div>
