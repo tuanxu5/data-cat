@@ -3,381 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DataCat - Hồ sơ bảo hiểm</title>
+    <title>Detail Page | Data Cat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <style>
-      :root {
-        --primary-color: #0054c6;
-        --secondary-color: #14b8a6;
-        --accent-color: #ff6b8b;
-        --light-gray: #f0f4f8;
-      }
-
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: var(--primary-color);
-      }
-
-      .datacat-logo {
-        height: 40px;
-      }
-
-      .navbar {
-        background-color: var(--primary-color);
-        padding: 10px 20px;
-      }
-
-      .navbar-brand {
-        color: white;
-        font-weight: bold;
-      }
-
-      .app-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      .icon-menu {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 20px;
-      }
-
-      .icon-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        padding: 10px;
-        border-radius: 10px;
-        transition: all 0.3s;
-      }
-
-      .icon-item:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        transform: translateY(-5px);
-      }
-
-      .icon-item i {
-        font-size: 24px;
-        margin-bottom: 5px;
-      }
-
-      .content-card {
-        background-color: white;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .card-header {
-        padding: 15px 20px;
-        background-color: white;
-        border-bottom: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .card-header h5 {
-        margin: 0;
-        color: var(--primary-color);
-        font-weight: bold;
-      }
-
-      .timestamp {
-        color: #6c757d;
-        font-size: 0.8rem;
-      }
-
-      .tab-container {
-        display: flex;
-        overflow: hidden;
-        background-color: #f1f1f1;
-        border-radius: 30px;
-        margin: 0 20px;
-      }
-
-      .tab-btn {
-        flex: 1;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 10px 16px;
-        transition: 0.3s;
-        font-size: 16px;
-        text-align: center;
-        border-radius: 30px;
-        background-color: #f1f1f1;
-      }
-
-      .tab-btn.active {
-        background-color: var(--accent-color);
-        color: white;
-      }
-
-      .tab-content {
-        padding: 20px;
-        min-height: 400px;
-      }
-
-      .document-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-      }
-
-      .document-item {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .document-item img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-
-      .card-footer {
-        padding: 15px 20px;
-        background-color: white;
-        border-top: 1px solid #f0f0f0;
-      }
-
-      .btn-action {
-        padding: 8px 16px;
-        border-radius: 50px;
-        font-size: 14px;
-        margin-right: 10px;
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .btn-download {
-        background-color: var(--primary-color);
-        color: white;
-      }
-
-      .btn-download:hover {
-        background-color: #0043a0;
-        color: white;
-      }
-
-      .btn-delete {
-        background-color: #f8f9fa;
-        color: #dc3545;
-        border: 1px solid #dee2e6;
-      }
-
-      .btn-delete:hover {
-        background-color: #f0f0f0;
-      }
-
-      .placeholder-text {
-        color: #6c757d;
-        text-align: center;
-        font-style: italic;
-        margin-top: 150px;
-      }
-
-      @media (max-width: 768px) {
-        .icon-menu {
-          flex-wrap: wrap;
-        }
-
-        .icon-item {
-          width: 50%;
-          margin-bottom: 10px;
-        }
-
-        .document-grid {
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        }
-      }
-
-      @media (max-width: 576px) {
-        .tab-container {
-          flex-direction: column;
-          border-radius: 10px;
-        }
-
-        .tab-btn {
-          border-radius: 0;
-        }
-
-        .document-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .card-footer {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .btn-action {
-          margin-bottom: 10px;
-          width: 100%;
-          justify-content: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/detail-file.css" />
   </head>
   <body>
-    <!-- Header -->
-    <nav class="navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <div class="d-flex align-items-center">
-            <span class="text-white fw-bold fs-4">Data</span>
-            <span class="text-info fw-bold fs-4">cat</span>
-          </div>
-          <div class="ms-2 text-white-50 small">
-            <small>smart • faster • platform</small>
-          </div>
-        </a>
-        <div class="d-flex align-items-center">
-          <div class="dropdown me-3">
-            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              <img src="https://flagcdn.com/w20/gb.png" alt="English" class="me-1" /> EN
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#"
-                  ><img src="https://flagcdn.com/w20/gb.png" alt="English" class="me-1" /> EN</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  ><img src="https://flagcdn.com/w20/vn.png" alt="Vietnamese" class="me-1" /> VI</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              tranbatoan95@gmail.com
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Tài khoản</a></li>
-              <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="app-container">
-      <!-- Icon Menu -->
-      <div class="icon-menu">
-        <a href="#" class="icon-item">
-          <i class="fas fa-th-large"></i>
-          <span>Tất cả tệp</span>
-        </a>
-        <a href="#" class="icon-item">
-          <i class="fas fa-id-card"></i>
-          <span>ID</span>
-        </a>
-        <a href="#" class="icon-item">
-          <i class="fas fa-file-alt"></i>
-          <span>Document</span>
-        </a>
-        <a href="#" class="icon-item">
-          <i class="fas fa-book"></i>
-          <span>Book</span>
-        </a>
-      </div>
-
-      <!-- Content Card -->
-      <div class="content-card">
-        <div class="card-header">
-          <div class="d-flex align-items-center">
-            <a href="#" class="me-3">
-              <i class="fas fa-arrow-left text-primary"></i>
-            </a>
-            <h5>Hồ sơ bảo hiểm</h5>
-          </div>
-          <div class="timestamp"><i class="far fa-clock"></i> 16:45 - 25/02/2025</div>
-        </div>
-
-        <!-- Tabs -->
-        <div class="tab-container">
-          <button class="tab-btn" id="btnResults" onclick="openTab('results')">Kết quả xử lý</button>
-          <button class="tab-btn active" id="btnOriginal" onclick="openTab('original')">File gốc</button>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="tab-content">
-          <div id="results" class="tab-pane" style="display: none">
-            <div class="placeholder-text">(Giao diện đã extract)</div>
-          </div>
-          <div id="original" class="tab-pane">
-            <div class="document-grid">
-              <div class="document-item">
-                <img src="/api/placeholder/250/180" alt="Hóa đơn" />
+    <!-- Background layers -->
+    <div class="background-layer circuit-layer"></div>
+    <div class="background-layer gradient-layer"></div>
+    <!-- Top Bar -->
+    <div class="content-layer-detail-file">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="top-bar">
+              <div class="logo-container">
+                <img src="../assets/images/logo.png" alt="DataCat Logo" class="logo" />
               </div>
-              <div class="document-item">
-                <img src="/api/placeholder/250/180" alt="Căn cước công dân" />
-              </div>
-              <div class="document-item">
-                <img src="/api/placeholder/250/180" alt="Biên lai" />
-              </div>
-              <div class="document-item">
-                <img src="/api/placeholder/250/180" alt="Hóa đơn khác" />
-              </div>
-              <div class="document-item">
-                <img src="/api/placeholder/250/180" alt="Căn cước công dân" />
-              </div>
-              <div class="document-item">
-                <img src="/api/placeholder/250/180" alt="Tài liệu" />
+              <div class="d-flex align-items-center">
+                <div class="language-switcher">
+                  <button class="language-btn">
+                    <img src="../assets/images/languages/english.png" alt="English" />
+                    <span>EN</span>
+                  </button>
+                  <button class="language-btn">
+                    <img src="../assets/images/languages/vietnamese.png" alt="Vietnamese" />
+                    <span>VN</span>
+                  </button>
+                </div>
+                <div class="user-dropdown" id="userDropdown">
+                  tranbatoan95@gmail.com
+                  <i class="fas fa-chevron-down ms-2"></i>
+                </div>
+                <div class="user-menu" id="userMenu">
+                  <div class="user-menu-item"><i class="fas fa-key"></i> Đổi mật khẩu</div>
+                  <div class="user-menu-item"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <!-- Header -->
+        <div class="header d-flex justify-content-center align-items-center px-3">
+          <button class="back-button">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <h1 class="header-title">Hồ sơ bảo hiểm</h1>
+          <span class="timestamp">
+            <i class="far fa-clock"></i>
+            <span>15:45 - 25/02/2025</span>
+          </span>
+        </div>
 
-        <!-- Footer -->
-        <div class="card-footer">
-          <button class="btn btn-outline-danger btn-action"><i class="fas fa-trash me-2"></i> Xóa tệp</button>
-          <div class="float-end">
-            <button class="btn btn-download btn-action"><i class="fas fa-file-word me-2"></i> Tải xuống Word</button>
-            <button class="btn btn-download btn-action"><i class="fas fa-file-excel me-2"></i> Tải xuống Excel</button>
-            <button class="btn btn-download btn-action"><i class="fas fa-file-pdf me-2"></i> Tải xuống PDF</button>
+        <!-- Tab Navigation -->
+        <div class="container tab-container">
+          <ul class="nav tab-nav" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="result-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#result-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="result-tab-pane"
+                aria-selected="true"
+              >
+                Kết quả xử lý
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="file-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#file-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="file-tab-pane"
+                aria-selected="false"
+              >
+                File gốc
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <!-- Result Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="result-tab-pane"
+              role="tabpanel"
+              aria-labelledby="result-tab"
+              tabindex="0"
+            >
+              <div class="document-grid">
+                <div class="document-card">
+                  <img
+                    src="https://d3design.vn/uploads/Anh_bia_summer_sale_holiday_podium_display_on_yellow_background.jpg"
+                    alt="Bảng kê chi tiết"
+                  />
+                </div>
+                <div class="document-card">
+                  <img src="https://d3design.vn/uploads/summer_242_01.jpg" alt="Căn cước công dân" />
+                </div>
+                <div class="document-card">
+                  <img src="https://d3design.vn/uploads/5495874gh6y5356.jpg" alt="Biên lai thu tiền" />
+                </div>
+                <div class="document-card">
+                  <img src="https://intphcm.com/data/upload/banner-quang-cao-sale.jpg" alt="Đơn xin bảo hiểm" />
+                </div>
+                <div class="document-card">
+                  <img src="https://d3design.vn/uploads/7138970.jpg" alt="Căn cước công dân 2" />
+                </div>
+              </div>
+            </div>
+
+            <!-- File Tab -->
+            <div class="tab-pane fade" id="file-tab-pane" role="tabpanel" aria-labelledby="file-tab" tabindex="0">
+              <div class="document-grid">
+                <div class="document-card">
+                  <img
+                    src="https://insieutoc.vn/wp-content/uploads/2021/03/cach-thiet-ke-poster.jpg"
+                    alt="File gốc 1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-actions">
+              <button class="action-button danger">
+                <i class="fas fa-trash me-2"></i>
+                Xóa tệp
+              </button>
+              <button class="action-button">
+                <i class="fas fa-file-word me-2"></i>
+                Tải xuống Word
+              </button>
+              <button class="action-button">
+                <i class="fas fa-file-excel me-2"></i>
+                Tải xuống Excel
+              </button>
+              <button class="action-button">
+                <i class="fas fa-file-pdf me-2"></i>
+                Tải xuống PDF
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function openTab(tabName) {
-        // Hide all tab contents
-        const tabContents = document.getElementsByClassName("tab-pane");
-        for (let i = 0; i < tabContents.length; i++) {
-          tabContents[i].style.display = "none";
-        }
-
-        // Remove active class from all tab buttons
-        const tabButtons = document.getElementsByClassName("tab-btn");
-        for (let i = 0; i < tabButtons.length; i++) {
-          tabButtons[i].classList.remove("active");
-        }
-
-        // Show the selected tab content and mark the button as active
-        document.getElementById(tabName).style.display = "block";
-        document.getElementById("btn" + tabName.charAt(0).toUpperCase() + tabName.slice(1)).classList.add("active");
-      }
-
-      // Initialize the first tab to be shown
-      document.addEventListener("DOMContentLoaded", function () {
-        // Show the active tab on page load
-        const activeTab = document.querySelector(".tab-btn.active").id.replace("btn", "").toLowerCase();
-        document.getElementById(activeTab).style.display = "block";
-      });
-    </script>
+    <script></script>
   </body>
 </html>
