@@ -372,16 +372,23 @@
   .footer-bottom {
     padding: 0 24px;
   }
-
-  /* .icon-download {
-    display: none;
-  } */
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-  /* CSS cho desktop */
-}
+  /* CSS cho desktop nhỏ */
+  .app-detail-file {
+    padding: 0 24px;
+  }
 
-@media (min-width: 1201px) {
-  /* CSS cho desktop lớn */
+  .header__top-bar {
+    padding: 0 48px;
+  }
+
+  .tab-container {
+    padding: 0 48px;
+  }
+
+  .footer-bottom {
+    padding: 0 48px;
+  }
 }
