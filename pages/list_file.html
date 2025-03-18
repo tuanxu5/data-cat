@@ -13,72 +13,80 @@
     <!-- Background layers -->
     <div class="background-layer background-layer--circuit"></div>
     <div class="background-layer background-layer--gradient"></div>
-    <!-- Top Bar -->
-    <div class="app-list-file">
-      <div class="container-fluit">
+
+    <!-- Main application -->
+    <div class="app-file">
+      <div class="container-fluid">
+        <!-- Top navigation bar -->
         <div class="row">
           <div class="col-12">
-            <div class="top-bar">
-              <div class="logo-container">
-                <img src="../assets/images/logo.png" alt="DataCat Logo" class="logo" />
+            <header class="app-file__header">
+              <div class="app-file__logo">
+                <img src="../assets/images/logo.png" alt="DataCat Logo" class="app-file__logo-img" />
               </div>
-              <div class="d-flex align-items-center">
-                <div class="d-md-none">
+              <div class="app-file__user-controls">
+                <!-- Mobile menu -->
+                <div class="app-file__mobile-menu d-md-none">
                   <span class="text-white fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="../assets/icons/icon-menu.svg" alt="" />
+                    <img src="../assets/icons/icon-menu.svg" alt="Menu" />
                   </span>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="app-file__dropdown-item" href="#">
                         <span>Trang cá nhân</span>
                         <img src="../assets/icons/icon-profile.svg" class="text-black ms-2" alt="" width="18" />
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="app-file__dropdown-item" href="#">
                         <span>Ngôn ngữ</span>
                         <img src="../assets/icons/icon-translate.svg" class="text-black ms-2" alt="" width="18" />
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item change-password" href="#">
+                      <a class="app-file__dropdown-item app-file__dropdown-item--password" href="#">
                         <span>Đổi mật khẩu</span>
                         <img src="../assets/icons/icon-lock.svg" class="text-black ms-2" alt="" width="18" />
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="../index.html">
+                      <a class="app-file__dropdown-item app-file__dropdown-item--logout" href="../index.html">
                         <span>Đăng xuất</span>
                         <img src="../assets/icons/icon-logout.svg" class="text-black ms-2" alt="" width="18" />
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="language-switcher d-none d-md-inline-block">
-                  <button class="language-btn active">
+
+                <!-- Language switcher -->
+                <div class="app-file__language d-none d-md-inline-block">
+                  <button class="app-file__language-btn app-file__language-btn--active">
                     <img src="../assets/images/languages/english.png" alt="English" />
                     <span>EN</span>
                   </button>
-                  <button class="language-btn">
+                  <button class="app-file__language-btn">
                     <img src="../assets/images/languages/vietnamese.png" alt="Vietnamese" />
                     <span>VN</span>
                   </button>
                 </div>
+
                 <span class="me-4 text-white d-none d-md-inline-block">|</span>
-                <div class="d-none d-md-inline-block">
+
+                <!-- User menu -->
+                <div class="app-file__user-menu d-none d-md-inline-block">
                   <span class="text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <span>tranbatoan95@gmail.com</span>
                     <i class="fas fa-chevron-down ms-2"></i>
                   </span>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="app-file__dropdown-item" href="#">
                         <span>Đổi mật khẩu</span>
                         <img src="../assets/icons/icon-lock.svg" class="text-black ms-2" alt="" width="18" />
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item text-center logout" href="../index.html">
+                      <a class="app-file__dropdown-item app-file__dropdown-item--logout" href="../index.html">
                         <span>Đăng xuất</span>
                         <img src="../assets/icons/icon-logout.svg" class="text-black ms-2" alt="" width="18" />
                       </a>
@@ -86,14 +94,16 @@
                   </ul>
                 </div>
               </div>
-            </div>
+            </header>
           </div>
         </div>
+
+        <!-- Main navigation tabs -->
         <div class="row">
           <div class="col-12">
-            <div class="main-nav" id="myTab" role="tablist">
+            <nav class="app-file__nav main-nav" id="myTab" role="tablist">
               <div
-                class="nav-item nav-link active"
+                class="app-file__nav-item nav-item nav-link active"
                 id="home-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#home"
@@ -102,13 +112,13 @@
                 aria-controls="home"
                 aria-selected="true"
               >
-                <div class="nav-icon">
-                  <img src="../assets/images/tabs-file/icon-tab-all-file.png" alt="" />
+                <div class="app-file__nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-all-file.png" alt="All files" />
                 </div>
                 Tất cả tệp
               </div>
               <div
-                class="nav-item nav-link"
+                class="app-file__nav-item nav-item nav-link"
                 id="id-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#id-tab-content"
@@ -117,13 +127,13 @@
                 aria-controls="id-tab-content"
                 aria-selected="false"
               >
-                <div class="nav-icon">
-                  <img src="../assets/images/tabs-file/icon-tab-id.png" alt="" />
+                <div class="app-file__nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-id.png" alt="ID" />
                 </div>
                 ID
               </div>
               <div
-                class="nav-item nav-link"
+                class="app-file__nav-item nav-item nav-link"
                 id="document-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#document-tab-content"
@@ -132,13 +142,13 @@
                 aria-controls="document-tab-content"
                 aria-selected="false"
               >
-                <div class="nav-icon">
-                  <img src="../assets/images/tabs-file/icon-tab-document.png" alt="" />
+                <div class="app-file__nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-document.png" alt="Document" />
                 </div>
                 Document
               </div>
               <div
-                class="nav-item nav-link"
+                class="app-file__nav-item nav-item nav-link"
                 id="book-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#book-tab-content"
@@ -147,380 +157,381 @@
                 aria-controls="book-tab-content"
                 aria-selected="false"
               >
-                <div class="nav-icon">
-                  <img src="../assets/images/tabs-file/icon-tab-book.png" alt="" />
+                <div class="app-file__nav-icon">
+                  <img src="../assets/images/tabs-file/icon-tab-book.png" alt="Book" />
                 </div>
                 Book
               </div>
-            </div>
+            </nav>
           </div>
         </div>
+
+        <!-- Content area -->
         <div class="row">
           <div class="col-12" id="myTabContent">
-            <div class="content-area tab-content py-md-5 px-md-4">
+            <div class="app-file__content tab-content py-md-5 px-md-4">
+              <!-- All files tab -->
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="content-header">
-                  <div>
-                    <h2 class="content-title">Tất cả</h2>
-                    <span class="content-count">4 kết quả được tìm thấy</span>
+                <div class="app-file__content-header">
+                  <div class="app-file__content-title-group">
+                    <h2 class="app-file__content-title">Tất cả</h2>
+                    <span class="app-file__content-count">4 kết quả được tìm thấy</span>
                   </div>
-                  <div class="d-flex content-actions">
-                    <select class="form-select border-0 fw-semibold">
+                  <div class="d-flex app-file__content-actions">
+                    <select class="form-select border-0 fw-semibold app-file__sort-select">
                       <option selected>Ngày tạo mới nhất</option>
                       <option value="">Ngày tạo lâu nhất</option>
                     </select>
-                    <button class="create-btn-file">
+                    <button class="app-file__create-btn">
                       <span>Tạo tệp mới</span>
-                      <img src="../assets/icons/icon-download-pink.svg" alt="" />
+                      <img src="../assets/icons/icon-download-pink.svg" alt="Create" />
                     </button>
                   </div>
                 </div>
-                <div class="document-grid">
-                  <!-- Document 1 -->
 
+                <div class="app-file__document-grid">
+                  <!-- Document card 1 -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-face-id.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--id">
+                          <img src="../assets/icons/icon-face-id.svg" alt="ID" />
                           <span>ID</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu" onclick="">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
 
-                  <!-- Document 1 -->
-
+                  <!-- Document card 2 -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-face-id.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--id">
+                          <img src="../assets/icons/icon-face-id.svg" alt="ID" />
                           <span>ID</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
 
-                  <!-- Document 1 -->
+                  <!-- Document card 3 -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-book.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--book">
+                          <img src="../assets/icons/icon-book.svg" alt="Book" />
                           <span>Book</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
-                  <!-- Document 1 -->
+
+                  <!-- Document card 4 -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-document.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--document">
+                          <img src="../assets/icons/icon-document.svg" alt="Document" />
                           <span>Document</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="tab-container tab-pane fade" id="id-tab-content" role="tabpanel" aria-labelledby="id-tab">
-                <div class="content-header">
-                  <div>
-                    <h2 class="content-title">ID</h2>
-                    <span class="content-count">2 kết quả được tìm thấy</span>
+              <!-- ID tab -->
+              <div class="tab-pane fade" id="id-tab-content" role="tabpanel" aria-labelledby="id-tab">
+                <div class="app-file__content-header">
+                  <div class="app-file__content-title-group">
+                    <h2 class="app-file__content-title">ID</h2>
+                    <span class="app-file__content-count">2 kết quả được tìm thấy</span>
                   </div>
-                  <div class="d-flex content-actions">
-                    <select class="form-select border-0 fw-semibold">
+                  <div class="d-flex app-file__content-actions">
+                    <select class="form-select border-0 fw-semibold app-file__sort-select">
                       <option selected>Ngày tạo mới nhất</option>
                       <option value="">Ngày tạo lâu nhất</option>
                     </select>
-                    <button class="create-btn-file">
+                    <button class="app-file__create-btn">
                       <span>Tạo tệp mới</span>
-                      <i class="fas fa-upload"></i>
+                      <img src="../assets/icons/icon-download-pink.svg" alt="Create" />
                     </button>
                   </div>
                 </div>
-                <div class="document-grid">
-                  <!-- Document 1 -->
 
+                <div class="app-file__document-grid">
+                  <!-- Document card 1 -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-face-id.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--id">
+                          <img src="../assets/icons/icon-face-id.svg" alt="ID" />
                           <span>ID</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
-                  <!-- Document 1 -->
 
+                  <!-- Document card 2 -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-face-id.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--id">
+                          <img src="../assets/icons/icon-face-id.svg" alt="ID" />
                           <span>ID</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Document tab -->
               <div class="tab-pane fade" id="document-tab-content" role="tabpanel" aria-labelledby="document-tab">
-                <div class="content-header">
-                  <div>
-                    <h2 class="content-title">Document</h2>
-                    <span class="content-count">1 kết quả được tìm thấy</span>
+                <div class="app-file__content-header">
+                  <div class="app-file__content-title-group">
+                    <h2 class="app-file__content-title">Document</h2>
+                    <span class="app-file__content-count">1 kết quả được tìm thấy</span>
                   </div>
-                  <div class="d-flex content-actions">
-                    <select class="form-select border-0 fw-semibold">
+                  <div class="d-flex app-file__content-actions">
+                    <select class="form-select border-0 fw-semibold app-file__sort-select">
                       <option selected>Ngày tạo mới nhất</option>
                       <option value="">Ngày tạo lâu nhất</option>
                     </select>
-                    <button class="create-btn-file">
+                    <button class="app-file__create-btn">
                       <span>Tạo tệp mới</span>
-                      <i class="fas fa-upload"></i>
+                      <img src="../assets/icons/icon-download-pink.svg" alt="Create" />
                     </button>
                   </div>
                 </div>
-                <div class="document-grid">
-                  <!-- Document 1 -->
 
+                <div class="app-file__document-grid">
+                  <!-- Document card -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-document.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--document">
+                          <img src="../assets/icons/icon-document.svg" alt="Document" />
                           <span>Document</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Book tab -->
               <div class="tab-pane fade" id="book-tab-content" role="tabpanel" aria-labelledby="book-tab">
-                <div class="content-header">
-                  <div>
-                    <h2 class="content-title">Book</h2>
-                    <span class="content-count">1 kết quả được tìm thấy</span>
+                <div class="app-file__content-header">
+                  <div class="app-file__content-title-group">
+                    <h2 class="app-file__content-title">Book</h2>
+                    <span class="app-file__content-count">1 kết quả được tìm thấy</span>
                   </div>
-                  <div class="d-flex content-actions">
-                    <select class="form-select border-0 fw-semibold">
+                  <div class="d-flex app-file__content-actions">
+                    <select class="form-select border-0 fw-semibold app-file__sort-select">
                       <option selected>Ngày tạo mới nhất</option>
                       <option value="">Ngày tạo lâu nhất</option>
                     </select>
-                    <button class="create-btn-file">
+                    <button class="app-file__create-btn">
                       <span>Tạo tệp mới</span>
-                      <i class="fas fa-upload"></i>
+                      <img src="../assets/icons/icon-download-pink.svg" alt="Create" />
                     </button>
                   </div>
                 </div>
-                <div class="document-grid">
-                  <!-- Document 1 -->
 
+                <div class="app-file__document-grid">
+                  <!-- Document card -->
                   <div class="document-card">
-                    <div class="document-image-container">
+                    <div class="document-card__image-container">
                       <img
                         src="https://cdn.tgdd.vn/News/Thumb/99/11-6-1200x675.jpg"
-                        class="document-image"
+                        class="document-card__image"
                         alt="Căn cước công dân"
                       />
                       <a href="./detail_file.html">
-                        <div class="document-title-bar">
-                          <h3 class="document-title">Căn cước công dân</h3>
+                        <div class="document-card__title-bar">
+                          <h3 class="document-card__title">Căn cước công dân</h3>
                         </div>
                       </a>
                     </div>
-
-                    <div class="document-title-bottom">
-                      <div class="groups-document-info">
-                        <span class="document-type">
-                          <img src="../assets/icons/icon-book.svg" alt="" />
+                    <div class="document-card__footer">
+                      <div class="document-card__info">
+                        <span class="document-card__type document-card__type--book">
+                          <img src="../assets/icons/icon-book.svg" alt="Book" />
                           <span>Book</span>
                         </span>
-                        <span class="document-count">
-                          <img src="../assets/icons/icon-file.svg" alt="" />
+                        <span class="document-card__count">
+                          <img src="../assets/icons/icon-file.svg" alt="Files" />
                           <span>16</span>
                         </span>
-                        <span class="document-time">
-                          <img src="../assets/icons/icon-clock.svg" alt="" />
+                        <span class="document-card__time">
+                          <img src="../assets/icons/icon-clock.svg" alt="Time" />
                           <span>15:45 - 25/02/2025</span>
                         </span>
                       </div>
-                      <div class="document-menu">
-                        <img src="../assets/icons/icon-dots-vertical.svg" alt="" width="20" />
+                      <div class="document-card__menu">
+                        <img src="../assets/icons/icon-dots-vertical.svg" alt="Menu" width="20" />
                       </div>
                     </div>
                   </div>
@@ -529,29 +540,31 @@
             </div>
           </div>
         </div>
+
+        <!-- Footer -->
         <div class="row">
           <div class="col-12">
-            <div class="footer">
-              <div class="footer-content">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="../assets/images/logo-footer.png" alt="DataCat Logo" class="footer-logo" />
-                  <img src="../assets/images/tag-footer.png" alt="Medcat" class="marketai-logo" />
+            <footer class="app-file__footer">
+              <div class="app-file__footer-content">
+                <div class="app-file__footer-logo-group">
+                  <img src="../assets/images/logo-footer.png" alt="DataCat Logo" class="app-file__footer-logo" />
+                  <img src="../assets/images/tag-footer.png" alt="Medcat" class="app-file__footer-tag" />
                 </div>
-                <div class="footer-right">
-                  <div class="groups-store">
-                    <a href="#">
-                      <img src="../assets/images/download/app-store.png" alt="App Store" class="app-store-btn" />
+                <div class="app-file__footer-right">
+                  <div class="app-file__store-links">
+                    <a href="#" class="app-file__store-link">
+                      <img src="../assets/images/download/app-store.png" alt="App Store" class="app-file__store-img" />
                     </a>
-                    <a href="#">
-                      <img src="../assets/images/download/ch-play.png" alt="Google Play" class="app-store-btn" />
+                    <a href="#" class="app-file__store-link">
+                      <img src="../assets/images/download/ch-play.png" alt="Google Play" class="app-file__store-img" />
                     </a>
                   </div>
-                  <div class="qr-code">
-                    <img src="../assets/images/download/qr-code.png" alt="QR Code" class="qr-code" />
+                  <div class="app-file__qr-code">
+                    <img src="../assets/images/download/qr-code.png" alt="QR Code" class="app-file__qr-img" />
                   </div>
                 </div>
               </div>
-            </div>
+            </footer>
           </div>
         </div>
       </div>
@@ -559,6 +572,5 @@
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script></script>
   </body>
 </html>

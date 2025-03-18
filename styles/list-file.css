@@ -1,4 +1,4 @@
-.app-list-file {
+.app-file {
   position: relative;
   z-index: 3;
   height: 100vh;
@@ -7,26 +7,26 @@
   overflow-x: hidden;
 }
 
-.top-bar {
+.app-file__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 125px;
 }
 
-.logo-container img {
+.app-file__logo-img {
   width: 132px;
   padding: 24px 0;
   object-fit: cover;
 }
 
-.language-switcher {
+.app-file__language {
   display: flex;
   align-items: center;
   margin-right: 1rem;
 }
 
-.language-btn {
+.app-file__language-btn {
   background: none;
   border: none;
   color: white;
@@ -35,26 +35,26 @@
   cursor: pointer;
 }
 
-.language-btn img {
+.app-file__language-btn img {
   width: 20px;
   height: 20px;
   margin-right: 5px;
 }
 
-.language-btn.active img {
+.app-file__language-btn--active img {
   padding: 1px;
   border: 1px solid #fff;
   border-radius: 100px;
 }
 
-.main-nav {
+.app-file__nav {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
   max-width: 500px;
 }
 
-.dropdown-item {
+.app-file__dropdown-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,9 +66,10 @@
   font-size: 0.9375rem;
   border-radius: 6px;
   font-weight: 600;
+  color: var(--text-default);
 }
 
-.dropdown-item.logout {
+.app-file__dropdown-item--logout {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -82,7 +83,7 @@
   color: #206de5;
 }
 
-.nav-item {
+.app-file__nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,7 +96,7 @@
   font-weight: 600;
 }
 
-.nav-item.active::after {
+.app-file__nav-item.active::after {
   content: "";
   position: absolute;
   top: 67.5%;
@@ -108,7 +109,7 @@
   background-position: center;
 }
 
-.nav-icon {
+.app-file__nav-icon {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   width: 3.2rem;
@@ -120,27 +121,27 @@
   background: linear-gradient(to top, #10449e66, #10449e);
 }
 
-.active .nav-icon {
+.active .app-file__nav-icon {
   border: 1px solid #fff;
   background: transparent;
 }
 
-.nav-icon img {
+.app-file__nav-icon img {
   width: 2rem;
 }
 
-.nav-item.active {
+.app-file__nav-item--active {
   color: #fff;
 }
 
-.content-area {
+.app-file__content {
   background-color: white;
   border-radius: 36px 36px 0 0;
   padding: 36px 125px !important;
   min-height: calc(100vh - 180px);
 }
 
-.content-header {
+.app-file__content-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,22 +149,22 @@
   margin-bottom: 30px;
 }
 
-.content-title {
+.app-file__content-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0px;
 }
 
-.content-count {
+.app-file__content-count {
   font-size: 0.875rem;
   color: #989ba2;
   font-weight: normal;
 }
 
-.filter-dropdown {
+.app-file__sort-select {
   border-radius: 4px;
-  padding: 8px 12px;
-  font-size: 13px;
+
+  font-size: 0.9375rem;
   font-weight: 500;
   color: #313741;
   background-color: white;
@@ -172,11 +173,11 @@
   align-items: center;
 }
 
-.filter-dropdown i {
+.app-file__sort-select i {
   margin-left: 8px;
 }
 
-.create-btn-file {
+.app-file__create-btn {
   background-color: var(--secondary-pink);
   color: white;
   border: none;
@@ -195,7 +196,7 @@
   gap: 10px;
 }
 
-.create-btn-file img {
+.app-file__create-btn img {
   background-color: #fff;
   height: 28px;
   width: 28px;
@@ -203,7 +204,7 @@
   border-radius: 50px;
 }
 
-.document-grid {
+.app-file__document-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
@@ -216,19 +217,19 @@
   cursor: pointer;
 }
 
-.document-image-container {
+.document-card__image-container {
   position: relative;
   background-color: #dfe4ed;
 }
 
-.document-image {
+.document-card__image {
   width: 100%;
   height: 100%;
   border-radius: 12px;
   object-fit: cover;
 }
 
-.document-title-bar {
+.document-card__title-bar {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -242,7 +243,7 @@
   border-radius: 12px;
 }
 
-.groups-document-info {
+.document-card__info {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -250,15 +251,11 @@
   font-size: 0.9375rem;
 }
 
-.form-select {
-  font-size: 0.9375rem !important;
-}
-
-.groups-document-info img {
+.document-card__info img {
   height: 16px;
 }
 
-.document-type {
+.document-card__type {
   color: var(--bs-primary);
   font-weight: 600;
   display: flex;
@@ -266,19 +263,19 @@
   gap: 6px;
 }
 
-.document-type img {
+.document-card__type img {
   background-color: var(--bs-primary);
   padding: 2px;
   border-radius: 4px;
 }
 
-.document-title {
+.document-card__title {
   font-size: 1.25rem !important;
   font-weight: 700;
   margin-bottom: 0;
 }
 
-.document-title-bottom {
+.document-card__footer {
   background-color: #dfe4ed;
   display: flex;
   justify-content: space-between;
@@ -286,134 +283,117 @@
   font-size: 12px;
 }
 
-.document-count {
+.document-card__count {
   display: flex;
   align-items: center;
   gap: 6px;
   color: #333;
 }
 
-.document-time {
+.document-card__time {
   display: flex;
   align-items: center;
   gap: 6px;
   color: #333;
 }
 
-.document-menu {
+.document-card__menu {
   font-size: 16px;
 }
 
-.footer {
+.app-file__footer {
   padding: 20px 125px;
   text-align: center;
   background-color: white;
   border-top: 1px solid #c9d0db;
 }
 
-.footer-content {
+.app-file__footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-logo {
+.app-file__footer-logo {
   height: 50.65px;
 }
 
-.marketai-logo {
+.app-file__footer-tag {
   height: 48px;
 }
 
-.footer-right {
+.app-file__footer-right {
   text-align: right;
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.product-text {
-  font-size: 12px;
-  color: #666;
-  margin-right: 5px;
-}
-
-.groups-store {
+.app-file__store-links {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.qr-code {
+.app-file__qr-img {
   height: 5rem;
 }
 
-.app-store-links {
-  margin-top: 15px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.app-store-btn {
+.app-file__store-img {
   width: 120px;
   margin-right: 10px;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .document-grid {
+  .app-file__document-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
   }
 
-  .content-header {
+  .app-file__content-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .filter-dropdown {
+  .app-file__sort-select {
     flex-grow: 1;
   }
 
-  .footer-content {
+  .app-file__footer-content {
     flex-direction: column;
   }
 
-  .footer-right {
+  .app-file__footer-right {
     margin-top: 20px;
     text-align: center;
   }
 
-  .app-store-links {
-    justify-content: center;
-  }
-
-  .nav-item.active::after {
+  .app-file__nav-item.active::after {
     top: 69%;
   }
 }
 
 @media (max-width: 576px) {
-  .app-list-file {
+  .app-file {
     padding: 0 12px;
   }
 
-  .top-bar {
+  .app-file__header {
     padding: 0;
   }
 
-  .content-area {
+  .app-file__content {
     border-radius: 24px 24px 0 0;
     padding: 24px 12px !important;
   }
 
-  .footer {
+  .app-file__footer {
     padding: 20px 12px;
   }
 
-  .create-btn-file {
+  .app-file__create-btn {
     width: fit-content;
     height: fit-content;
     min-width: fit-content;
@@ -422,70 +402,66 @@
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-  /* CSS cho tablet */
-  .app-list-file {
+  .app-file {
     padding: 0 16px;
   }
 
-  .top-bar {
+  .app-file__header {
     padding: 0 24px;
   }
 
-  .content-area {
+  .app-file__content {
     border-radius: 24px 24px 0 0;
     padding: 24px 24px !important;
   }
 
-  .footer {
+  .app-file__footer {
     padding: 20px 24px;
   }
 
-  .dropdown-item {
+  .app-file__dropdown-item {
     padding: 8px 16px;
   }
 
-  .dropdown-item.logout {
+  .app-file__dropdown-item--logout {
     padding: 8px 16px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  /* CSS cho desktop nhỏ */
-
-  .app-list-file {
+  .app-file {
     padding: 0 16px;
   }
 
-  .top-bar {
+  .app-file__header {
     padding: 0 24px;
   }
 
-  .content-area {
+  .app-file__content {
     border-radius: 24px 24px 0 0;
     padding: 24px 24px !important;
   }
 
-  .footer {
+  .app-file__footer {
     padding: 20px 24px;
   }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-  /* CSS cho desktop */
-  .app-list-file {
+  .app-file {
     padding: 0 24px;
   }
 
-  .top-bar {
+  .app-file__header {
     padding: 0 48px;
   }
 
-  .content-area {
+  .app-file__content {
     border-radius: 24px 24px 0 0;
     padding: 24px 48px !important;
   }
 
-  .footer {
+  .app-file__footer {
     padding: 20px 48px;
   }
 }
