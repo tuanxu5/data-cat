@@ -63,7 +63,7 @@
   margin: 6px 10px;
   padding: 10px 24px;
   border: 1px solid #ccd1d9;
-  font-size: 15px;
+  font-size: 0.9375rem;
   border-radius: 6px;
   font-weight: 600;
 }
@@ -91,7 +91,7 @@
   padding: 10px;
   cursor: pointer;
   position: relative;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
 }
 
@@ -149,7 +149,7 @@
 }
 
 .content-title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0px;
 }
@@ -189,7 +189,7 @@
   margin-left: 15px;
   gap: 10px;
   width: -webkit-fill-available;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   min-width: 185px;
   height: 52px;
@@ -246,11 +246,11 @@
   align-items: center;
   gap: 12px;
   color: #3b3b3b;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .form-select {
-  font-size: 15px !important;
+  font-size: 0.9375rem !important;
 }
 
 .groups-document-info img {
@@ -269,7 +269,7 @@
 }
 
 .document-title {
-  font-size: 20px !important;
+  font-size: 1.25rem !important;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -359,7 +359,7 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .document-grid {
-    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
   }
 
@@ -403,6 +403,13 @@
 
   .footer {
     padding: 20px 12px;
+  }
+
+  .create-btn-file {
+    width: fit-content;
+    height: fit-content;
+    min-width: fit-content;
+    padding: 8px 12px;
   }
 }
 

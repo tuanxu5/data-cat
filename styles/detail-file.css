@@ -66,7 +66,7 @@
   padding: 10px 0px;
   cursor: pointer;
   position: relative;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
 }
 
@@ -96,9 +96,9 @@
 .header-title {
   color: var(--bs-primary);
   font-weight: 700;
-  line-height: 26px;
   letter-spacing: 0;
-  font-size: 20px;
+  line-height: 1.625rem;
+  font-size: 1.25rem;
   margin-bottom: 0;
 }
 
@@ -111,7 +111,7 @@
   margin: 6px 10px;
   padding: 10px 24px;
   border: 1px solid #ccd1d9;
-  font-size: 15px;
+  font-size: 0.9375rem;
   border-radius: 6px;
   font-weight: 600;
 }
@@ -124,7 +124,7 @@
   margin: 0 10px;
   padding: 10px 24px;
   background-color: #e1edff;
-  font-size: 15px;
+  font-size: 0.9375rem;
   border-radius: 6px;
   border: none;
   color: #206de5;
@@ -134,7 +134,7 @@
   color: var(--bs-primary);
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 1.25rem;
   position: absolute;
   left: 2rem;
   color: #206de5;
@@ -268,9 +268,8 @@
 
 .footer-bottom button.button-delete {
   background-color: #fff;
-
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: #e14547;
 }
 
@@ -287,8 +286,8 @@
 }
 
 .icon-download {
-  height: 28px;
-  width: 28px;
+  height: 1.75rem;
+  width: 1.75rem;
   padding: 2px;
   border-radius: 50px;
   background-color: white;
@@ -314,6 +313,21 @@
   }
   .footer-bottom {
     padding: 0 12px;
+  }
+
+  .button-download-title {
+    display: none;
+  }
+
+  .tab-nav .nav-link {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .document-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
   }
 }
 
