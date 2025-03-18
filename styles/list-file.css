@@ -98,7 +98,7 @@
 .nav-item.active::after {
   content: "";
   position: absolute;
-  bottom: -68%;
+  top: 67.5%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -388,6 +388,10 @@
 
   .app-store-links {
     justify-content: center;
+  }
+
+  .nav-item.active::after {
+    top: 69%;
   }
 }
 
