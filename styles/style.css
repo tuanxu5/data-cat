@@ -70,16 +70,6 @@ a {
   text-decoration: none;
 }
 
-.dropdown-item {
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.dropdown-item:hover {
-  background-color: #e1edff;
-}
-
 .form-select {
   min-width: fit-content;
   border-radius: 10px;

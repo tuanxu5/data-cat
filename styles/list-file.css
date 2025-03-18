@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 75px;
 }
 
 .logo-container img {
@@ -44,6 +45,34 @@
   max-width: 500px;
 }
 
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: auto;
+  margin: 6px 10px;
+  padding: 10px 24px;
+  border: 1px solid #ccd1d9;
+  font-size: 15px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.dropdown-item.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  margin: 0 10px;
+  padding: 10px 24px;
+  background-color: #e1edff;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  color: #206de5;
+}
+
 .nav-item {
   display: flex;
   flex-direction: column;
@@ -53,7 +82,8 @@
   padding: 10px;
   cursor: pointer;
   position: relative;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .nav-item.active::after {
@@ -97,7 +127,7 @@
 .content-area {
   background-color: white;
   border-radius: 20px 20px 0 0;
-  padding: 20px 12px;
+  padding: 28px 75px !important;
   min-height: calc(100vh - 180px);
 }
 
@@ -110,7 +140,7 @@
 }
 
 .content-title {
-  font-size: 1.4rem;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 0px;
 }
@@ -142,14 +172,26 @@
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 8px 16px;
   font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: 15px;
   gap: 10px;
   width: -webkit-fill-available;
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 185px;
+  height: 52px;
+}
+
+.create-btn-file img {
+  background-color: #fff;
+  height: 28px;
+  width: 28px;
+  padding: 4px;
+  border-radius: 50px;
 }
 
 .document-grid {
@@ -187,7 +229,7 @@
   background: linear-gradient(to top, #173363e5, #1733630d);
   display: flex;
   flex-direction: column-reverse;
-  padding: 6px 12px;
+  padding: 16px;
   border-radius: 12px;
 }
 
@@ -196,12 +238,15 @@
   align-items: center;
   gap: 12px;
   color: #3b3b3b;
-  font-size: 11px;
+  font-size: 15px;
+}
+
+.form-select {
+  font-size: 15px !important;
 }
 
 .groups-document-info img {
-  height: 14px;
-  mix-blend-mode: multiply;
+  height: 16px;
 }
 
 .document-type {
@@ -211,13 +256,13 @@
 
 .document-type img {
   background-color: var(--bs-primary);
-  padding: 1px;
+  padding: 2px;
   border-radius: 4px;
 }
 
 .document-title {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 20px !important;
+  font-weight: 700;
   margin-bottom: 0;
 }
 
@@ -248,7 +293,7 @@
 }
 
 .footer {
-  padding: 20px;
+  padding: 20px 75px;
   text-align: center;
   background-color: white;
   border-top: 1px solid #c9d0db;
