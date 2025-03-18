@@ -89,6 +89,34 @@
   margin-bottom: 0;
 }
 
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: auto;
+  margin: 6px 10px;
+  padding: 10px 24px;
+  border: 1px solid #ccd1d9;
+  font-size: 15px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.dropdown-item.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  margin: 0 10px;
+  padding: 10px 24px;
+  background-color: #e1edff;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  color: #206de5;
+}
+
 .back-button {
   color: var(--bs-primary);
   background: none;
