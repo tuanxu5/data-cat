@@ -9,11 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 125px;
 }
 
 .logo-container img {
-  width: 6.8rem;
+  width: 132px;
   padding: 24px 0;
 }
 
@@ -83,7 +83,7 @@
 .header {
   background-color: #e6eefc;
   padding: 15px;
-  border-radius: 12px 12px 0 0;
+  border-radius: 36px 36px 0 0;
   position: relative;
 }
 
@@ -128,16 +128,15 @@
   color: var(--bs-primary);
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
   position: absolute;
-  left: 20px;
+  left: 2rem;
   color: #206de5;
 }
 
 .tab-container {
   background-color: white;
-  /* min-height: 70vh; */
-  padding: 0 100px;
+  padding: 0 125px;
   overflow: hidden;
 }
 
@@ -223,7 +222,7 @@
 
 .timestamp {
   position: absolute;
-  right: 10px;
+  right: 2rem;
   text-align: right;
   color: #206de5;
   font-size: 15px;
@@ -245,7 +244,7 @@
 .footer-bottom {
   height: 58px;
   border-top: 1px solid #ccd1d9;
-  padding: 0 100px;
+  padding: 0 125px;
 }
 
 .footer-bottom button {

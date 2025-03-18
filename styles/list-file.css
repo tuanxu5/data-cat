@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 125px;
 }
 
 .logo-container img {
@@ -132,8 +132,8 @@
 
 .content-area {
   background-color: white;
-  border-radius: 20px 20px 0 0;
-  padding: 28px 100px !important;
+  border-radius: 36px 36px 0 0;
+  padding: 36px 125px !important;
   min-height: calc(100vh - 180px);
 }
 
@@ -298,7 +298,7 @@
 }
 
 .footer {
-  padding: 20px 100px;
+  padding: 20px 125px;
   text-align: center;
   background-color: white;
   border-top: 1px solid #c9d0db;
