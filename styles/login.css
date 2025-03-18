@@ -9,6 +9,12 @@
   padding: 10vh 0;
 }
 
+.language-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
 .logo img {
   width: 10rem;
 }
@@ -16,13 +22,13 @@
 .login-container {
   max-width: 550px;
   width: 100%;
-  padding: 20px;
+  padding: 16px 32px;
 }
 
 .info-box {
   background-color: #d2ecf1;
   border-radius: 8px;
-  font-size: 0.875rem;
+  font-size: 15px;
   color: #366a92;
 }
 
