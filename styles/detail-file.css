@@ -311,6 +311,7 @@
     width: fit-content;
     background-image: none;
   }
+
   .footer-bottom {
     padding: 0 12px;
   }
@@ -333,10 +334,48 @@
 
 @media (min-width: 577px) and (max-width: 768px) {
   /* CSS cho tablet */
+  .app-detail-file {
+    padding: 0 16px;
+  }
+
+  .header__top-bar {
+    padding: 0;
+  }
+
+  .tab-container {
+    padding: 0 24px;
+  }
+
+  .footer-bottom {
+    padding: 0 24px;
+  }
+
+  .icon-download {
+    display: none;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   /* CSS cho desktop nhỏ */
+  .app-detail-file {
+    padding: 0 16px;
+  }
+
+  .header__top-bar {
+    padding: 0 24px;
+  }
+
+  .tab-container {
+    padding: 0 24px;
+  }
+
+  .footer-bottom {
+    padding: 0 24px;
+  }
+
+  /* .icon-download {
+    display: none;
+  } */
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
