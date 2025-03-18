@@ -128,7 +128,7 @@
   color: var(--bs-primary);
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 16px;
   position: absolute;
   left: 20px;
   color: #206de5;
@@ -137,7 +137,7 @@
 .tab-container {
   background-color: white;
   /* min-height: 70vh; */
-  padding: 0 75px;
+  padding: 100px;
   overflow: hidden;
 }
 
@@ -226,7 +226,7 @@
   right: 10px;
   text-align: right;
   color: #206de5;
-  font-size: 0.75rem;
+  font-size: 15px;
 }
 
 .form-section {
