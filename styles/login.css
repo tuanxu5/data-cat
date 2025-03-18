@@ -11,20 +11,15 @@
 .language-selector__btn {
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--white-color);
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 4px;
 }
 
-.language-selector__btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
 .language-selector__btn--active img {
   padding: 1px;
-  border: 1px solid #fff;
+  border: 1px solid var(--white-color);
   border-radius: 100px;
 }
 
@@ -57,7 +52,7 @@
 }
 
 .app-login__title {
-  color: white;
+  color: var(--white-color);
   font-weight: bold;
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
@@ -65,14 +60,14 @@
 }
 
 .app-login__card {
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .app-login__info {
-  background-color: #d2ecf1;
+  background-color: var(--bg-card-info);
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -80,7 +75,7 @@
 
 .app-login__info-text {
   margin-bottom: 0;
-  color: #366a92;
+  color: var(--text-card-info);
   font-size: 0.9375rem;
 }
 
@@ -97,7 +92,6 @@
 .app-login__input {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #ced4da;
   border-radius: 0.5rem;
   font-size: 1rem;
 }
@@ -115,13 +109,8 @@
 }
 
 .app-login__btn--primary {
-  background-color: #0d6efd;
-  color: white;
-}
-
-.app-login__btn--primary:hover {
-  background-color: #0b5ed7;
-  color: white;
+  background-color: var(--bg-primary);
+  color: var(--white-color);
 }
 
 .app-login__forgot {
@@ -130,7 +119,7 @@
 }
 
 .app-login__link {
-  color: #0275d8;
+  color: var(--text-link);
   text-decoration: none;
 }
 
