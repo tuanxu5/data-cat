@@ -180,14 +180,13 @@
   background-color: var(--secondary-pink);
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-left: 15px;
-  gap: 10px;
   width: -webkit-fill-available;
   font-size: 1rem;
   font-weight: 700;
@@ -260,6 +259,9 @@
 .document-type {
   color: var(--bs-primary);
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .document-type img {
@@ -430,6 +432,14 @@
 
   .footer {
     padding: 20px 24px;
+  }
+
+  .dropdown-item {
+    padding: 8px 16px;
+  }
+
+  .dropdown-item.logout {
+    padding: 8px 16px;
   }
 }
 

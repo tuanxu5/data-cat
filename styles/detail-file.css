@@ -330,6 +330,14 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
   }
+
+  .dropdown-item {
+    padding: 8px 16px;
+  }
+
+  .dropdown-item.logout {
+    padding: 8px 16px;
+  }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
