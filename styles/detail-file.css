@@ -285,7 +285,7 @@
 /* Responsive styles */
 @media (max-width: 576px) {
   .app-detail-file {
-    padding: 0 12px;
+    padding: 0 0px;
   }
 
   .app-detail__top-bar {
@@ -294,6 +294,10 @@
 
   .app-detail__tab-container {
     padding: 0 12px;
+  }
+
+  .app-detail__nav-list {
+    padding: 0 16px;
   }
 
   .app-detail__tab-nav {
@@ -331,7 +335,7 @@
 
 @media (min-width: 577px) and (max-width: 768px) {
   .app-detail-file {
-    padding: 0 16px;
+    padding: 0 12px;
   }
 
   .app-detail__top-bar {

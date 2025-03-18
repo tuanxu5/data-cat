@@ -1,4 +1,4 @@
-.app-file {
+.app-list-file {
   position: relative;
   z-index: 3;
   height: 100vh;
@@ -371,17 +371,21 @@
   }
 
   .app-file__nav-item.active::after {
-    top: 69%;
+    top: 70%;
   }
 }
 
 @media (max-width: 576px) {
-  .app-file {
-    padding: 0 12px;
+  .app-list-file {
+    padding: 0 0px;
   }
 
   .app-file__header {
     padding: 0;
+  }
+
+  .app-file__nav {
+    padding: 0 16px;
   }
 
   .app-file__content {
@@ -402,8 +406,8 @@
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-  .app-file {
-    padding: 0 16px;
+  .app-list-file {
+    padding: 0 12px;
   }
 
   .app-file__header {
@@ -429,7 +433,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  .app-file {
+  .app-list-file {
     padding: 0 16px;
   }
 
@@ -448,7 +452,7 @@
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-  .app-file {
+  .app-list-file {
     padding: 0 24px;
   }
 
