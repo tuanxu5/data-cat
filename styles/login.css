@@ -1,67 +1,145 @@
-.content-layer-login {
-  position: relative;
-  z-index: 3;
-  height: 100vh;
+/* Language Selector */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 4;
   display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  padding: 10vh 0;
+  gap: 10px;
 }
 
-.language-btn img {
+.language-selector__btn {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.language-selector__btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.language-selector__btn--active img {
+  padding: 1px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+}
+
+.language-selector__icon {
   width: 20px;
   height: 20px;
   margin-right: 5px;
+  border-radius: 50%;
 }
 
-.logo img {
-  width: 10rem;
+/* Login Page */
+.app-login {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5vh 1rem;
 }
 
-.login-container {
-  max-width: 550px;
+.app-login__logo {
+  margin-bottom: 2rem;
+}
+
+.app-login__container {
+  max-width: 450px;
   width: 100%;
-  padding: 16px 32px;
 }
 
-.info-box {
-  background-color: #d2ecf1;
-  border-radius: 8px;
-  font-size: 15px;
-  color: #366a92;
-}
-
-.form-control {
-  padding: 10px 15px;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.btn-login {
-  background-color: #007bff;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
+.app-login__title {
   color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.forgot-link {
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.forgot-link a {
+.app-login__card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.app-login__info {
+  background-color: #d2ecf1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-login__info-text {
+  margin-bottom: 0;
+  color: #366a92;
+  font-size: 0.9375rem;
+}
+
+.app-login__form-group {
+  margin-bottom: 1.25rem;
+}
+
+.app-login__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.app-login__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.app-login__btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-top: 1.5rem;
+}
+
+.app-login__btn--primary {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.app-login__btn--primary:hover {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+.app-login__forgot {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.app-login__link {
   color: #0275d8;
-  font-size: 0.875rem;
   text-decoration: none;
 }
 
-.forgot-link a:hover {
+.app-login__link:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .login__card {
+    padding: 2rem;
+  }
 }

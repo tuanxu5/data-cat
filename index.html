@@ -10,57 +10,55 @@
   </head>
   <body>
     <!-- Background layers -->
-    <div class="background-layer circuit-layer"></div>
-    <div class="background-layer gradient-layer"></div>
+    <div class="background-layer background-layer--circuit"></div>
+    <div class="background-layer background-layer--gradient"></div>
 
     <!-- Language Selector -->
     <div class="language-selector">
-      <a href="#" class="language-btn active"><img src="../assets/images/languages/english.png" alt="English" /> EN</a>
-      <a href="#"><img src="../assets/images/languages/vietnamese.png" alt="Vietnam" /> VI</a>
+      <a href="#" class="language-selector__btn language-selector__btn--active">
+        <img class="language-selector__icon" src="../assets/images/languages/english.png" alt="English" /> EN
+      </a>
+      <a href="#" class="language-selector__btn">
+        <img class="language-selector__icon" src="../assets/images/languages/vietnamese.png" alt="Vietnam" /> VI
+      </a>
     </div>
 
     <!-- Content layer -->
-    <div class="content-layer-login">
+    <div class="app-login">
       <!-- Logo -->
-      <div class="mb-5">
-        <img src="../assets/images/logo.png" alt="" width="160" />
+      <div class="app-login__logo">
+        <img src="../assets/images/logo.png" alt="Data cat logo" width="160" />
       </div>
 
-      <div class="login-container">
+      <div class="app-login__container">
         <!-- Login Title -->
-        <h1 class="text-white fw-bold fs-2 mb-4 text-center">Đăng nhập</h1>
+        <h1 class="app-login__title">Đăng nhập</h1>
 
         <!-- Login Card -->
-        <div class="bg-white shadow p-3 p-md-4 rounded-4">
+        <div class="app-login__card">
           <!-- Info Box -->
-          <div class="info-box p-3 mb-4">
-            <p class="mb-0">
+          <div class="app-login__info">
+            <p class="app-login__info-text">
               To try the demo, please log in with the following credentials. If you don't have an account, you can
-              <a href="#" class="link-opacity-100">register as a new user</a>.
+              <a href="#" class="app-login__link">register as a new user</a>.
             </p>
           </div>
 
           <!-- Login Form -->
-          <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                size="small"
-                class="form-control rounded-3"
-                id="email"
-                placeholder="name@example.com"
-              />
+          <form class="app-login__form">
+            <div class="app-login__form-group">
+              <label for="email" class="app-login__label">Email</label>
+              <input type="email" class="form-control app-login__input" id="email" placeholder="name@example.com" />
             </div>
 
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control rounded-3" id="password" placeholder="Enter password" />
+            <div class="app-login__form-group">
+              <label for="password" class="app-login__label">Password</label>
+              <input type="password" class="form-control app-login__input" id="password" placeholder="Enter password" />
             </div>
 
             <a href="./pages/list_file.html" class="btn btn-primary w-100 mb-2 p-2 mt-3">Login</a>
-            <div class="text-start mt-2">
-              <a href="#" style="text-decoration-color: #fff"> Forgot your password? </a>
+            <div class="app-login__forgot">
+              <a href="#" class="app-login__link"> Forgot your password? </a>
             </div>
           </form>
         </div>

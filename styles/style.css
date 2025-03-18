@@ -25,6 +25,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
 .background-layer {
   position: absolute;
   top: 0;
@@ -33,7 +38,7 @@ body {
   height: 100%;
 }
 
-.circuit-layer {
+.background-layer--circuit {
   background-image: url("../assets/images/background-image.png");
   background-size: cover;
   background-position: top center;
@@ -41,44 +46,11 @@ body {
   z-index: 1;
 }
 
-.gradient-layer {
+.background-layer--gradient {
   background: linear-gradient(to bottom, #196af4eb, #124cb1, #0f3d8e);
   background-size: 100% auto;
   background-position: top center;
   z-index: 2;
-}
-
-.language-selector {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 4;
-}
-
-.language-selector a {
-  color: white;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 0.875rem;
-  display: inline-flex;
-  align-self: center;
-}
-
-.language-selector a img {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-}
-
-.language-btn.active img {
-  padding: 1px;
-  border: 1px solid #fff;
-  border-radius: 100px;
-}
-
-a {
-  color: var(--text-link);
-  text-decoration: none;
 }
 
 .form-select {
