@@ -38,6 +38,12 @@
   margin-right: 5px;
 }
 
+.language-btn.active img {
+  padding: 1px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
