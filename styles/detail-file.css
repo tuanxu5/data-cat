@@ -117,6 +117,7 @@
   font-size: 0.9375rem;
   border-radius: 6px;
   font-weight: 600;
+  color: var(--text-default);
 }
 
 .app-detail__dropdown-item--logout {
@@ -283,7 +284,7 @@
 
 /* Responsive styles */
 @media (max-width: 576px) {
-  .app-detail {
+  .app-detail-file {
     padding: 0 12px;
   }
 
@@ -329,7 +330,7 @@
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-  .app-detail {
+  .app-detail-file {
     padding: 0 16px;
   }
 
@@ -357,7 +358,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  .app-detail {
+  .app-detail-file {
     padding: 0 16px;
   }
 
@@ -375,7 +376,7 @@
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-  .app-detail {
+  .app-detail-file {
     padding: 0 24px;
   }
 
