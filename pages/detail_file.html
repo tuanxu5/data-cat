@@ -15,18 +15,20 @@
     <div class="background-layer background-layer--gradient"></div>
 
     <div class="app-detail-file">
-      <div class="container-fluit">
-        <header class="header">
+      <div class="container-fluid">
+        <!-- Header -->
+        <header class="app-detail__header">
           <div class="row">
             <div class="col-12">
-              <div class="header__top-bar">
-                <div class="header__logo">
-                  <img src="../assets/images/logo.png" alt="DataCat Logo" class="logo" />
+              <div class="app-detail__top-bar">
+                <div class="app-detail__logo">
+                  <img src="../assets/images/logo.png" alt="DataCat Logo" class="app-detail__logo-img" />
                 </div>
-                <div class="header__controls">
-                  <div class="d-md-none">
+                <div class="app-detail__controls">
+                  <!-- Mobile menu -->
+                  <div class="app-detail__mobile-menu d-md-none">
                     <span
-                      class="header__menu-toggle text-white fs-5"
+                      class="app-detail__menu-toggle text-white fs-5"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -35,56 +37,61 @@
                     </span>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="app-detail__dropdown-item" href="#">
                           <span>Trang cá nhân</span>
                           <img src="../assets/icons/icon-profile.svg" class="text-black ms-2" alt="" width="18" />
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="app-detail__dropdown-item" href="#">
                           <span>Ngôn ngữ</span>
                           <img src="../assets/icons/icon-translate.svg" class="text-black ms-2" alt="" width="18" />
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item change-password" href="#">
+                        <a class="app-detail__dropdown-item app-detail__dropdown-item--password" href="#">
                           <span>Đổi mật khẩu</span>
                           <img src="../assets/icons/icon-lock.svg" class="text-black ms-2" alt="" width="18" />
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item logout" href="../index.html">
+                        <a class="app-detail__dropdown-item app-detail__dropdown-item--logout" href="../index.html">
                           <span>Đăng xuất</span>
                           <img src="../assets/icons/icon-logout.svg" class="text-black ms-2" alt="" width="18" />
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div class="language-switcher d-none d-md-inline-block">
-                    <button class="language-switcher__btn language-switcher__btn--active">
+
+                  <!-- Language switcher -->
+                  <div class="app-detail__language d-none d-md-inline-block">
+                    <button class="app-detail__language-btn app-detail__language-btn--active">
                       <img src="../assets/images/languages/english.png" alt="English" />
                       <span>EN</span>
                     </button>
-                    <button class="language-switcher__btn">
+                    <button class="app-detail__language-btn">
                       <img src="../assets/images/languages/vietnamese.png" alt="Vietnamese" />
                       <span>VN</span>
                     </button>
                   </div>
-                  <span class="header__divider me-4 text-white d-none d-md-inline-block">|</span>
-                  <div class="d-none d-md-inline-block">
+
+                  <span class="app-detail__divider me-4 text-white d-none d-md-inline-block">|</span>
+
+                  <!-- User menu -->
+                  <div class="app-detail__user-menu d-none d-md-inline-block">
                     <span class="text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <span>tranbatoan95@gmail.com</span>
                       <i class="fas fa-chevron-down ms-2"></i>
                     </span>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="app-detail__dropdown-item" href="#">
                           <span>Đổi mật khẩu</span>
                           <img src="../assets/icons/icon-lock.svg" class="text-black ms-2" alt="" width="18" />
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item text-center logout" href="../index.html">
+                        <a class="app-detail__dropdown-item app-detail__dropdown-item--logout" href="../index.html">
                           <span>Đăng xuất</span>
                           <img src="../assets/icons/icon-logout.svg" class="text-black ms-2" alt="" width="18" />
                         </a>
@@ -96,12 +103,14 @@
             </div>
           </div>
         </header>
-        <nav class="main-navbar">
+
+        <!-- Main navigation -->
+        <nav class="main-navbar app-detail__nav">
           <div class="row">
             <div class="col-12">
-              <div class="main-nav" id="myTab" role="tablist">
-                <div
-                  class="nav-item nav-link"
+              <div class="app-detail__nav-list" id="myTab" role="tablist">
+                <button
+                  class="app-detail__nav-item nav-item nav-link"
                   id="home-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#home"
@@ -110,13 +119,13 @@
                   aria-controls="home"
                   aria-selected="true"
                 >
-                  <div class="nav-icon">
-                    <img src="../assets/images/tabs-file/icon-tab-all-file.png" alt="" />
+                  <div class="app-detail__nav-icon">
+                    <img src="../assets/images/tabs-file/icon-tab-all-file.png" alt="All files" />
                   </div>
                   Tất cả tệp
-                </div>
-                <div
-                  class="nav-item nav-link"
+                </button>
+                <button
+                  class="app-detail__nav-item nav-item nav-link"
                   id="id-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#id-tab-content"
@@ -125,13 +134,13 @@
                   aria-controls="id-tab-content"
                   aria-selected="false"
                 >
-                  <div class="nav-icon">
-                    <img src="../assets/images/tabs-file/icon-tab-id.png" alt="" />
+                  <div class="app-detail__nav-icon">
+                    <img src="../assets/images/tabs-file/icon-tab-id.png" alt="ID" />
                   </div>
                   ID
-                </div>
-                <div
-                  class="nav-item nav-link"
+                </button>
+                <button
+                  class="app-detail__nav-item nav-item nav-link"
                   id="document-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#document-tab-content"
@@ -140,13 +149,13 @@
                   aria-controls="document-tab-content"
                   aria-selected="false"
                 >
-                  <div class="nav-icon">
-                    <img src="../assets/images/tabs-file/icon-tab-document.png" alt="" />
+                  <div class="app-detail__nav-icon">
+                    <img src="../assets/images/tabs-file/icon-tab-document.png" alt="Document" />
                   </div>
                   Document
-                </div>
-                <div
-                  class="nav-item nav-link"
+                </button>
+                <button
+                  class="app-detail__nav-item nav-item nav-link"
                   id="book-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#book-tab-content"
@@ -155,31 +164,34 @@
                   aria-controls="book-tab-content"
                   aria-selected="false"
                 >
-                  <div class="nav-icon">
-                    <img src="../assets/images/tabs-file/icon-tab-book.png" alt="" />
+                  <div class="app-detail__nav-icon">
+                    <img src="../assets/images/tabs-file/icon-tab-book.png" alt="Book" />
                   </div>
                   Book
-                </div>
+                </button>
               </div>
             </div>
           </div>
         </nav>
-        <main>
-          <div class="header-tab d-flex justify-content-center align-items-center px-3">
-            <a href="./list_file.html" class="back-button">
+
+        <!-- Main content -->
+        <main class="app-detail__main">
+          <div class="app-detail__header-tab d-flex justify-content-center align-items-center px-3">
+            <a href="./list_file.html" class="app-detail__back-btn">
               <i class="fa fa-arrow-left"></i>
             </a>
-            <h1 class="header-title">Hồ sơ bảo hiểm</h1>
-            <span class="timestamp d-none d-md-inline-block">
+            <h1 class="app-detail__title">Hồ sơ bảo hiểm</h1>
+            <span class="app-detail__timestamp d-none d-md-inline-block">
               <i class="far fa-clock"></i>
               <span>15:45 - 25/02/2025</span>
             </span>
           </div>
-          <div class="tab-container">
-            <ul class="nav tab-nav" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
+
+          <div class="app-detail__tab-container">
+            <ul class="app-detail__tab-nav nav tab-nav" id="myTab" role="tablist">
+              <li class="app-detail__tab-item nav-item" role="presentation">
                 <button
-                  class="nav-link active"
+                  class="app-detail__tab-link nav-link active"
                   id="result-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#result-tab-pane"
@@ -191,9 +203,9 @@
                   Kết quả xử lý
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
+              <li class="app-detail__tab-item nav-item" role="presentation">
                 <button
-                  class="nav-link"
+                  class="app-detail__tab-link nav-link"
                   id="file-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#file-tab-pane"
@@ -207,10 +219,10 @@
               </li>
             </ul>
 
-            <div class="tab-content" id="myTabContent">
+            <div class="app-detail__tab-content tab-content" id="myTabContent">
               <!-- Result Tab -->
               <div
-                class="tab-pane fade show active"
+                class="app-detail__tab-pane app-detail__tab-pane--active tab-pane fade show active"
                 id="result-tab-pane"
                 role="tabpanel"
                 aria-labelledby="result-tab"
@@ -218,7 +230,7 @@
               >
                 <div class="py-2 py-md-5">
                   <iframe
-                    class="custom-iframe rounded-4 w-100"
+                    class="app-detail__iframe rounded-4 w-100"
                     src="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
                     allowfullscreen
                     frameborder="1"
@@ -227,24 +239,30 @@
               </div>
 
               <!-- File Tab -->
-              <div class="tab-pane fade" id="file-tab-pane" role="tabpanel" aria-labelledby="file-tab" tabindex="0">
-                <div class="document-grid py-2 py-md-5">
-                  <div class="document-card">
+              <div
+                class="app-detail__tab-pane tab-pane fade"
+                id="file-tab-pane"
+                role="tabpanel"
+                aria-labelledby="file-tab"
+                tabindex="0"
+              >
+                <div class="app-detail__document-grid py-2 py-md-5">
+                  <div class="app-detail__document-card">
                     <img
                       src="https://d3design.vn/uploads/Anh_bia_summer_sale_holiday_podium_display_on_yellow_background.jpg"
                       alt="Bảng kê chi tiết"
                     />
                   </div>
-                  <div class="document-card">
+                  <div class="app-detail__document-card">
                     <img src="https://d3design.vn/uploads/summer_242_01.jpg" alt="Căn cước công dân" />
                   </div>
-                  <div class="document-card">
+                  <div class="app-detail__document-card">
                     <img src="https://d3design.vn/uploads/5495874gh6y5356.jpg" alt="Biên lai thu tiền" />
                   </div>
-                  <div class="document-card">
+                  <div class="app-detail__document-card">
                     <img src="https://intphcm.com/data/upload/banner-quang-cao-sale.jpg" alt="Đơn xin bảo hiểm" />
                   </div>
-                  <div class="document-card">
+                  <div class="app-detail__document-card">
                     <img src="https://d3design.vn/uploads/7138970.jpg" alt="Căn cước công dân 2" />
                   </div>
                 </div>
@@ -252,27 +270,28 @@
             </div>
           </div>
 
-          <footer class="footer-bottom bg-white shadow-up d-flex gap-2 justify-content-between align-items-center">
-            <button class="button-delete">
+          <!-- Footer -->
+          <footer class="app-detail__footer">
+            <button class="app-detail__delete-btn">
               <i class="fas fa-trash me-1 d-none d-md-inline-block"></i>
               <span>Xóa tệp</span>
             </button>
 
-            <div class="d-flex gap-2">
-              <button class="button-download-word">
-                <img src="../assets/icons/icon-word.svg" alt="" />
-                <span class="button-download-title">Tải xuống Word</span>
-                <img class="icon-download" src="../assets/icons/icon-download-word.svg" alt="" />
+            <div class="app-detail__download-group">
+              <button class="app-detail__download-btn app-detail__download-btn--word">
+                <img src="../assets/icons/icon-word.svg" alt="Word" />
+                <span class="app-detail__download-text">Tải xuống Word</span>
+                <img class="app-detail__download-icon" src="../assets/icons/icon-download-word.svg" alt="Download" />
               </button>
-              <button class="button-download-excel">
-                <img src="../assets/icons/icon-excel.svg" alt="" />
-                <span class="button-download-title">Tải xuống Excel</span>
-                <img class="icon-download" src="../assets/icons/icon-download-excel.svg" alt="" />
+              <button class="app-detail__download-btn app-detail__download-btn--excel">
+                <img src="../assets/icons/icon-excel.svg" alt="Excel" />
+                <span class="app-detail__download-text">Tải xuống Excel</span>
+                <img class="app-detail__download-icon" src="../assets/icons/icon-download-excel.svg" alt="Download" />
               </button>
-              <button class="button-download-pdf">
-                <img src="../assets/icons/icon-pdf.svg" alt="" />
-                <span class="button-download-title">Tải xuống PDF</span>
-                <img class="icon-download" src="../assets/icons/icon-download.svg" alt="" />
+              <button class="app-detail__download-btn app-detail__download-btn--pdf">
+                <img src="../assets/icons/icon-pdf.svg" alt="PDF" />
+                <span class="app-detail__download-text">Tải xuống PDF</span>
+                <img class="app-detail__download-icon" src="../assets/icons/icon-download.svg" alt="Download" />
               </button>
             </div>
           </footer>

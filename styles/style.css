@@ -77,10 +77,24 @@ a {
 
 @media (min-width: 577px) and (max-width: 768px) {
   /* CSS cho tablet */
+  html {
+    font-size: 14px !important;
+  }
+
+  body {
+    font-size: 14px !important;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   /* CSS cho desktop nhỏ */
+  html {
+    font-size: 15px !important;
+  }
+
+  body {
+    font-size: 15px !important;
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
